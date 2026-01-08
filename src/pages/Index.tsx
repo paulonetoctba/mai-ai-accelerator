@@ -6,6 +6,7 @@ import ProblemSection from "@/components/sections/ProblemSection";
 import SolutionSection from "@/components/sections/SolutionSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import BenefitsSection from "@/components/sections/BenefitsSection";
+import PricingSection from "@/components/sections/PricingSection";
 import AudienceSection from "@/components/sections/AudienceSection";
 import LaunchSection from "@/components/sections/LaunchSection";
 import AuthoritySection from "@/components/sections/AuthoritySection";
@@ -35,6 +36,9 @@ const Index = () => {
         <HowItWorksSection />
         <div id="beneficios">
           <BenefitsSection />
+        </div>
+        <div id="planos">
+          <PricingSection />
         </div>
         <AudienceSection />
         <div id="vip">
