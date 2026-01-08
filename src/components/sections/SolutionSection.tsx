@@ -1,6 +1,7 @@
 import { Brain, BarChart3, Target, Bot, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import aiDashboard from "@/assets/ai-dashboard.png";
 
 const features = [
   {
@@ -78,7 +79,7 @@ const SolutionSection = () => {
       
       <div className="container max-w-6xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6">
             Conheça o{" "}
             <span className="gradient-text">MAI</span>
@@ -89,6 +90,17 @@ const SolutionSection = () => {
             Uma plataforma que <span className="text-foreground font-semibold">orquestra múltiplas IAs líderes do mercado</span> para 
             criar, analisar, prever e otimizar campanhas de marketing em tempo real.
           </p>
+        </div>
+
+        {/* Dashboard Preview Image */}
+        <div className="relative mb-16 rounded-2xl overflow-hidden glass-card p-2 glow-pulse">
+          <img 
+            src={aiDashboard} 
+            alt="MAI Dashboard - Marketing Analytics com IA" 
+            className="w-full h-auto rounded-xl"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent rounded-xl" />
         </div>
 
         {/* Feature cards */}

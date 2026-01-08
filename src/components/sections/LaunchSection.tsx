@@ -2,6 +2,13 @@ import { Rocket, Crown, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+import { z } from "zod";
+import rocketImage from "@/assets/rocket-launch.png";
+
+const emailSchema = z.string().email("Por favor, insira um e-mail válido");
+
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -55,6 +62,31 @@ const CountdownTimer = () => {
 
 const LaunchSection = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const result = emailSchema.safeParse(email);
+    if (!result.success) {
+      toast.error(result.error.errors[0].message);
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    // Open mailto with the email
+    const subject = encodeURIComponent("Quero ser Fundador do MAI");
+    const body = encodeURIComponent(`Olá! Meu email é: ${email}\n\nQuero participar do programa de fundadores do MAI.`);
+    window.location.href = `mailto:maiplataforma@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Redirect to thank you page after a short delay
+    setTimeout(() => {
+      setIsSubmitting(false);
+      navigate("/obrigado");
+    }, 500);
+  };
 
   return (
     <section className="relative py-24 px-4 overflow-hidden">
@@ -63,8 +95,20 @@ const LaunchSection = () => {
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       
-      <div className="container max-w-4xl mx-auto relative z-10">
-        <div className="glass-card p-8 md:p-12 rounded-3xl text-center border-2 border-primary/20 shadow-[0_0_60px_hsl(180_100%_50%/0.1)]">
+      <div className="container max-w-6xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Rocket Image */}
+          <div className="hidden lg:block relative">
+            <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-transparent to-transparent blur-3xl" />
+            <img 
+              src={rocketImage} 
+              alt="Foguete representando crescimento" 
+              className="w-full max-w-md mx-auto relative z-10 drop-shadow-2xl"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="glass-card p-8 md:p-12 rounded-3xl text-center border-2 border-primary/20 shadow-[0_0_60px_hsl(180_100%_50%/0.1)]">
           {/* Founder badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 mb-6">
             <Crown className="w-4 h-4 text-primary" />
@@ -106,25 +150,31 @@ const LaunchSection = () => {
           </div>
 
           {/* Form */}
-          <div className="max-w-md mx-auto space-y-4">
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
             <Input
               type="email"
               placeholder="Seu melhor e-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="h-14 bg-card/50 border-border/50 text-center text-lg placeholder:text-muted-foreground/50"
+              required
             />
-            <a href="mailto:maiplataforma@gmail.com" className="w-full">
-              <Button variant="neon" size="xl" className="w-full">
-                <Rocket className="w-5 h-5" />
-                Quero Ser Fundador do MAI
-              </Button>
-            </a>
-          </div>
+            <Button 
+              type="submit" 
+              variant="neon" 
+              size="xl" 
+              className="w-full"
+              disabled={isSubmitting}
+            >
+              <Rocket className="w-5 h-5" />
+              {isSubmitting ? "Enviando..." : "Quero Ser Fundador do MAI"}
+            </Button>
+          </form>
 
           <p className="text-sm text-muted-foreground mt-4">
             🔒 Seus dados estão seguros. Não enviamos spam.
           </p>
+        </div>
         </div>
       </div>
     </section>
