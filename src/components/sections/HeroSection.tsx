@@ -22,13 +22,18 @@ const HeroSection = () => {
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 animate-fade-in-up opacity-0" style={{ animationDelay: "0.2s" }}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.2s" }}>
           O Futuro do Marketing
           <br />
           <span className="gradient-text">Não Usa Ferramentas.</span>
           <br />
           <span className="text-foreground">Usa Inteligência.</span>
         </h1>
+
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl font-semibold text-primary/80 mb-6 animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s" }}>
+          Software SaaS Agregador de IAs
+        </p>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 animate-fade-in-up opacity-0" style={{ animationDelay: "0.4s" }}>
