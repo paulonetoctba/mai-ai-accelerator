@@ -2,9 +2,39 @@ import { Rocket, Calendar, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+import { z } from "zod";
+
+const emailSchema = z.string().email("Por favor, insira um e-mail válido");
 
 const FinalCTASection = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const result = emailSchema.safeParse(email);
+    if (!result.success) {
+      toast.error(result.error.errors[0].message);
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    // Open mailto with the email
+    const subject = encodeURIComponent("Quero entrar na Lista VIP do MAI");
+    const body = encodeURIComponent(`Olá! Meu email é: ${email}\n\nQuero entrar na lista VIP do MAI.`);
+    window.location.href = `mailto:maiplataforma@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Redirect to thank you page after a short delay
+    setTimeout(() => {
+      setIsSubmitting(false);
+      navigate("/obrigado");
+    }, 500);
+  };
 
   return (
     <section className="relative py-24 px-4 overflow-hidden">
@@ -27,7 +57,7 @@ const FinalCTASection = () => {
         </p>
 
         {/* Email capture */}
-        <div className="max-w-md mx-auto mb-8">
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8">
           <div className="flex flex-col sm:flex-row gap-3">
             <Input
               type="email"
@@ -35,25 +65,30 @@ const FinalCTASection = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="h-14 bg-card/50 border-border/50 text-lg flex-1"
+              required
             />
-            <a href="mailto:maiplataforma@gmail.com">
-              <Button variant="neon" size="lg" className="h-14">
-                <Rocket className="w-5 h-5" />
-                Entrar na Lista VIP
-              </Button>
-            </a>
+            <Button 
+              type="submit" 
+              variant="neon" 
+              size="lg" 
+              className="h-14"
+              disabled={isSubmitting}
+            >
+              <Rocket className="w-5 h-5" />
+              {isSubmitting ? "Enviando..." : "Entrar na Lista VIP"}
+            </Button>
           </div>
-        </div>
+        </form>
 
         {/* Secondary CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="mailto:maiplataforma@gmail.com">
+          <a href="mailto:maiplataforma@gmail.com?subject=Solicitar%20Acesso%20Antecipado">
             <Button variant="neon-outline" size="lg">
               <Calendar className="w-5 h-5" />
               Solicitar Acesso Antecipado
             </Button>
           </a>
-          <a href="mailto:maiplataforma@gmail.com">
+          <a href="mailto:maiplataforma@gmail.com?subject=Falar%20com%20Especialista">
             <Button variant="glass" size="lg">
               <MessageCircle className="w-5 h-5" />
               Falar com Especialista

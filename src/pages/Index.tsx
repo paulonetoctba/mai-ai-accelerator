@@ -14,6 +14,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import FloatingCTA from "@/components/FloatingCTA";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
@@ -29,26 +30,56 @@ const Index = () => {
       {/* Main content */}
       <main>
         <HeroSection />
-        <ProblemSection />
-        <div id="solucao">
-          <SolutionSection />
-        </div>
-        <HowItWorksSection />
-        <div id="beneficios">
-          <BenefitsSection />
-        </div>
-        <div id="planos">
-          <PricingSection />
-        </div>
-        <AudienceSection />
-        <div id="vip">
-          <LaunchSection />
-        </div>
-        <AuthoritySection />
-        <div id="faq">
-          <FAQSection />
-        </div>
-        <FinalCTASection />
+        
+        <ScrollReveal>
+          <ProblemSection />
+        </ScrollReveal>
+        
+        <ScrollReveal delay={100}>
+          <div id="solucao">
+            <SolutionSection />
+          </div>
+        </ScrollReveal>
+        
+        <ScrollReveal direction="left">
+          <HowItWorksSection />
+        </ScrollReveal>
+        
+        <ScrollReveal delay={150}>
+          <div id="beneficios">
+            <BenefitsSection />
+          </div>
+        </ScrollReveal>
+        
+        <ScrollReveal direction="scale">
+          <div id="planos">
+            <PricingSection />
+          </div>
+        </ScrollReveal>
+        
+        <ScrollReveal delay={100}>
+          <AudienceSection />
+        </ScrollReveal>
+        
+        <ScrollReveal direction="right">
+          <div id="vip">
+            <LaunchSection />
+          </div>
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <AuthoritySection />
+        </ScrollReveal>
+        
+        <ScrollReveal delay={100}>
+          <div id="faq">
+            <FAQSection />
+          </div>
+        </ScrollReveal>
+        
+        <ScrollReveal direction="scale">
+          <FinalCTASection />
+        </ScrollReveal>
       </main>
 
       <Footer />
