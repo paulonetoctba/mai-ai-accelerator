@@ -116,9 +116,11 @@ const SolutionSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="gradient" size="xl">
-            Quero Ver na Prática
-          </Button>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="gradient" size="xl">
+              Quero Ver na Prática
+            </Button>
+          </a>
         </div>
       </div>
     </section>

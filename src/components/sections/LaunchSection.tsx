@@ -114,10 +114,12 @@ const LaunchSection = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="h-14 bg-card/50 border-border/50 text-center text-lg placeholder:text-muted-foreground/50"
             />
-            <Button variant="neon" size="xl" className="w-full">
-              <Rocket className="w-5 h-5" />
-              Quero Ser Fundador do MAI
-            </Button>
+            <a href="mailto:maiplataforma@gmail.com" className="w-full">
+              <Button variant="neon" size="xl" className="w-full">
+                <Rocket className="w-5 h-5" />
+                Quero Ser Fundador do MAI
+              </Button>
+            </a>
           </div>
 
           <p className="text-sm text-muted-foreground mt-4">

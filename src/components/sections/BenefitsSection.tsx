@@ -95,10 +95,12 @@ const BenefitsSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <Button variant="neon" size="xl">
-            <Rocket className="w-5 h-5" />
-            Quero Esses Resultados
-          </Button>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="neon" size="xl">
+              <Rocket className="w-5 h-5" />
+              Quero Esses Resultados
+            </Button>
+          </a>
         </div>
       </div>
     </section>

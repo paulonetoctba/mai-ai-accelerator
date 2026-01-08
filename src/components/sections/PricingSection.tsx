@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: "Business",
-    price: "$199",
+    price: "$999",
     period: "/mês",
     description: "Para empresas em crescimento acelerado",
     icon: Building2,
@@ -196,13 +196,15 @@ const PricingSection = () => {
                 </div>
 
                 {/* CTA */}
-                <Button
-                  variant={isPopular ? "neon" : "glass"}
-                  size="lg"
-                  className="w-full"
-                >
-                  {plan.cta}
-                </Button>
+                <a href="mailto:maiplataforma@gmail.com" className="w-full">
+                  <Button
+                    variant={isPopular ? "neon" : "glass"}
+                    size="lg"
+                    className="w-full"
+                  >
+                    {plan.cta}
+                  </Button>
+                </a>
               </div>
             );
           })}
