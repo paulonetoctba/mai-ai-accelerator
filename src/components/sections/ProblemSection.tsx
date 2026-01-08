@@ -96,9 +96,11 @@ const ProblemSection = () => {
 
         {/* Floating CTA */}
         <div className="mt-16 text-center">
-          <Button variant="neon" size="lg">
-            Quero Simplificar Meu Marketing
-          </Button>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="neon" size="lg">
+              Quero Simplificar Meu Marketing
+            </Button>
+          </a>
         </div>
       </div>
     </section>

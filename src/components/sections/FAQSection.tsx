@@ -70,9 +70,11 @@ const FAQSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button variant="neon" size="lg">
-            Ainda Quero Entrar
-          </Button>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="neon" size="lg">
+              Ainda Quero Entrar
+            </Button>
+          </a>
         </div>
       </div>
     </section>

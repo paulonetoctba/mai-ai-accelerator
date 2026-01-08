@@ -77,10 +77,12 @@ const AuthoritySection = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <Button variant="neon-outline" size="lg">
-            <MessageSquare className="w-5 h-5" />
-            Quero Participar do Beta
-          </Button>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="neon-outline" size="lg">
+              <MessageSquare className="w-5 h-5" />
+              Quero Participar do Beta
+            </Button>
+          </a>
         </div>
       </div>
     </section>

@@ -28,7 +28,7 @@ const Header = () => {
 
           {/* CTA */}
           <a 
-            href="#vip" 
+            href="mailto:maiplataforma@gmail.com" 
             className="px-4 py-2 text-sm font-semibold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
           >
             Acesso VIP

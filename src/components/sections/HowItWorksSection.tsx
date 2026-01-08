@@ -85,10 +85,12 @@ const HowItWorksSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <Button variant="neon-outline" size="lg">
-            <Play className="w-5 h-5" />
-            Ver Demo Interativa
-          </Button>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="neon-outline" size="lg">
+              <Play className="w-5 h-5" />
+              Ver Demo Interativa
+            </Button>
+          </a>
         </div>
       </div>
     </section>

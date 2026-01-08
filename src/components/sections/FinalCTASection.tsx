@@ -36,23 +36,29 @@ const FinalCTASection = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="h-14 bg-card/50 border-border/50 text-lg flex-1"
             />
-            <Button variant="neon" size="lg" className="h-14">
-              <Rocket className="w-5 h-5" />
-              Entrar na Lista VIP
-            </Button>
+            <a href="mailto:maiplataforma@gmail.com">
+              <Button variant="neon" size="lg" className="h-14">
+                <Rocket className="w-5 h-5" />
+                Entrar na Lista VIP
+              </Button>
+            </a>
           </div>
         </div>
 
         {/* Secondary CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button variant="neon-outline" size="lg">
-            <Calendar className="w-5 h-5" />
-            Solicitar Acesso Antecipado
-          </Button>
-          <Button variant="glass" size="lg">
-            <MessageCircle className="w-5 h-5" />
-            Falar com Especialista
-          </Button>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="neon-outline" size="lg">
+              <Calendar className="w-5 h-5" />
+              Solicitar Acesso Antecipado
+            </Button>
+          </a>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="glass" size="lg">
+              <MessageCircle className="w-5 h-5" />
+              Falar com Especialista
+            </Button>
+          </a>
         </div>
       </div>
     </section>

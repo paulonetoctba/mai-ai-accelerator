@@ -44,18 +44,24 @@ const HeroSection = () => {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up opacity-0" style={{ animationDelay: "0.6s" }}>
-          <Button variant="neon" size="xl" className="w-full sm:w-auto">
-            <Rocket className="w-5 h-5" />
-            Entrar na Lista VIP
-          </Button>
-          <Button variant="neon-outline" size="lg" className="w-full sm:w-auto">
-            <Play className="w-5 h-5" />
-            Ver Como Funciona
-          </Button>
-          <Button variant="glass" size="lg" className="w-full sm:w-auto">
-            <Lightbulb className="w-5 h-5" />
-            Quero Acessar Primeiro
-          </Button>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="neon" size="xl" className="w-full sm:w-auto">
+              <Rocket className="w-5 h-5" />
+              Entrar na Lista VIP
+            </Button>
+          </a>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="neon-outline" size="lg" className="w-full sm:w-auto">
+              <Play className="w-5 h-5" />
+              Ver Como Funciona
+            </Button>
+          </a>
+          <a href="mailto:maiplataforma@gmail.com">
+            <Button variant="glass" size="lg" className="w-full sm:w-auto">
+              <Lightbulb className="w-5 h-5" />
+              Quero Acessar Primeiro
+            </Button>
+          </a>
         </div>
 
         {/* Platform Mockup */}

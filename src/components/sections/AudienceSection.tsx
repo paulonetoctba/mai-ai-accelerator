@@ -70,13 +70,15 @@ const AudienceSection = () => {
               </div>
               <h3 className="text-lg font-bold font-heading mb-2">{audience.title}</h3>
               <p className="text-sm text-muted-foreground mb-4">{audience.description}</p>
-              <Button 
-                variant={selectedAudience === index ? "neon" : "ghost"} 
-                size="sm" 
-                className="w-full"
-              >
-                {audience.cta}
-              </Button>
+              <a href="mailto:maiplataforma@gmail.com" className="w-full">
+                <Button 
+                  variant={selectedAudience === index ? "neon" : "ghost"} 
+                  size="sm" 
+                  className="w-full"
+                >
+                  {audience.cta}
+                </Button>
+              </a>
             </div>
           ))}
         </div>
