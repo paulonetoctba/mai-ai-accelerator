@@ -61,11 +61,6 @@ const Index = () => {
           <AudienceSection />
         </ScrollReveal>
         
-        <ScrollReveal direction="right">
-          <div id="vip">
-            <LaunchSection />
-          </div>
-        </ScrollReveal>
         
         <ScrollReveal>
           <AuthoritySection />
