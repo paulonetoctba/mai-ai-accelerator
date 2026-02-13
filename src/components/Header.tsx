@@ -10,13 +10,19 @@ const Header = () => {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
               <Brain className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold font-heading gradient-text">MAI</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold font-heading gradient-text leading-none">MAI</span>
+              <span className="text-[9px] text-muted-foreground leading-none">Intelligence 360º</span>
+            </div>
           </div>
 
-          {/* Nav - hidden on mobile */}
+          {/* Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#solucao" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Solução
+            <a href="#ecossistema" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Ecossistema
+            </a>
+            <a href="#dashboard-preview" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Dashboard
             </a>
             <a href="#beneficios" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Benefícios
@@ -31,7 +37,7 @@ const Header = () => {
             href="mailto:maiplataforma@gmail.com" 
             className="px-4 py-2 text-sm font-semibold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
           >
-            Acesso VIP
+            Solicitar Acesso
           </a>
         </div>
       </div>

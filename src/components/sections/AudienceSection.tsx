@@ -1,37 +1,37 @@
-import { User, Briefcase, Building2, TrendingUp, Database } from "lucide-react";
+import { User, Briefcase, Building2, TrendingUp, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const audiences = [
   {
-    icon: User,
-    title: "Empreendedores",
-    description: "Escale seu marketing sem escalar sua equipe.",
-    cta: "Sou Empreendedor",
-  },
-  {
     icon: Briefcase,
     title: "Gestores de Marketing",
-    description: "Unifique suas ferramentas e multiplique resultados.",
+    description: "Veja o ROI real de cada canal em um único painel 360º.",
     cta: "Sou Gestor",
   },
   {
     icon: Building2,
     title: "Agências",
-    description: "Entregue mais valor para mais clientes.",
+    description: "Entregue dashboards inteligentes e retenha mais clientes.",
     cta: "Sou Agência",
+  },
+  {
+    icon: ShoppingBag,
+    title: "E-commerces",
+    description: "Conecte mídia paga ao checkout e otimize o ROAS real.",
+    cta: "Tenho E-commerce",
   },
   {
     icon: TrendingUp,
     title: "Times de Growth",
-    description: "Experimente mais rápido, escale com dados.",
+    description: "Experimente mais rápido com insights cruzados ponta a ponta.",
     cta: "Sou Growth",
   },
   {
-    icon: Database,
-    title: "Empresas Data-Driven",
-    description: "Transforme dados em decisões estratégicas.",
-    cta: "Sou Empresa",
+    icon: User,
+    title: "CMOs & Diretores",
+    description: "Tome decisões estratégicas com inteligência de dados unificada.",
+    cta: "Sou Diretor",
   },
 ];
 
@@ -40,20 +40,17 @@ const AudienceSection = () => {
 
   return (
     <section className="relative py-24 px-4 overflow-hidden">
-      {/* Background */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       
       <div className="container max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4">
-            O MAI é Para Quem
+            A MAI é Para Quem
             <br />
-            <span className="gradient-text">Leva Marketing a Sério</span>
+            <span className="gradient-text">Quer Visão Completa</span>
           </h2>
         </div>
 
-        {/* Audience cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {audiences.map((audience, index) => (
             <div

@@ -9,35 +9,37 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "O MAI substitui as ferramentas que eu já uso?",
-    answer: "O MAI pode integrar-se às suas ferramentas atuais ou substituí-las completamente. Nossa plataforma foi projetada para orquestrar múltiplas IAs, então você pode começar integrando e, gradualmente, migrar completamente conforme vê os resultados.",
+    question: "A MAI é um CRM?",
+    answer: "Não. A MAI não é CRM, não é BI tradicional e não usa planilhas. A MAI é o cérebro estratégico que conecta mídia, vendas e analytics em um único ecossistema inteligente, gerando insights automatizados de ponta a ponta.",
   },
   {
-    question: "Preciso saber sobre IA para usar o MAI?",
-    answer: "Não! O MAI foi criado para ser intuitivo e acessível. Você define seus objetivos em linguagem simples, e a plataforma cuida de toda a complexidade técnica. É marketing inteligente, não engenharia de prompts.",
+    question: "Quais plataformas a MAI integra?",
+    answer: "A MAI integra mídia (Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, YouTube Ads), canais de venda (Shopify, VTEX, WooCommerce, Landing Pages, Checkouts, Marketplaces, WhatsApp Business API) e analytics (Google Analytics 4, Pixels, Eventos, APIs proprietárias e dados comportamentais).",
   },
   {
-    question: "Quando terei acesso à plataforma?",
-    answer: "Os fundadores da lista VIP terão acesso prioritário nas próximas semanas. Estamos liberando em ondas para garantir a melhor experiência possível. Quanto antes você entrar na lista, mais cedo terá acesso.",
+    question: "Como a MAI calcula o ROI real?",
+    answer: "A MAI rastreia todo o caminho: Investimento → Tráfego → Engajamento → Conversão → Receita → ROI. Ao cruzar dados de mídia com dados de venda reais, a MAI consegue mostrar o impacto financeiro real de cada canal e campanha.",
   },
   {
-    question: "O MAI funciona para pequenas empresas?",
-    answer: "Absolutamente! O MAI foi projetado para escalar desde empreendedores solo até grandes corporações. Nossa precificação será flexível e baseada em uso, tornando-o acessível para negócios de todos os tamanhos.",
+    question: "A MAI funciona para e-commerces?",
+    answer: "Sim! A MAI é ideal para e-commerces. Ela conecta suas plataformas de mídia paga diretamente ao checkout, permitindo ver o ROAS real (não estimado), identificar gargalos de conversão e otimizar investimentos com base em receita, não cliques.",
   },
   {
-    question: "Como funciona o suporte?",
-    answer: "Fundadores VIP terão acesso a suporte prioritário via chat e calls exclusivas. Além disso, nossa comunidade de early adopters será um espaço valioso para troca de experiências e melhores práticas.",
+    question: "Preciso de equipe técnica para implementar?",
+    answer: "Não. A MAI foi projetada para ser intuitiva. As integrações são feitas em minutos via API, e o dashboard inteligente já entrega insights prontos para ação. Sem necessidade de analistas de dados ou engenheiros.",
+  },
+  {
+    question: "Qual o diferencial da MAI frente ao Google Analytics?",
+    answer: "O GA4 mostra dados de comportamento e tráfego. A MAI vai além: ela cruza os dados do GA4 com dados de mídia paga e vendas reais, gerando uma visão 360º que conecta investimento à receita e gera recomendações acionáveis automaticamente.",
   },
 ];
 
 const FAQSection = () => {
   return (
     <section className="relative py-24 px-4 overflow-hidden">
-      {/* Background */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       
       <div className="container max-w-4xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
             <HelpCircle className="w-4 h-4 text-primary" />
@@ -50,7 +52,6 @@ const FAQSection = () => {
           </h2>
         </div>
 
-        {/* Accordion */}
         <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem
@@ -68,11 +69,10 @@ const FAQSection = () => {
           ))}
         </Accordion>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <a href="mailto:maiplataforma@gmail.com">
             <Button variant="neon" size="lg">
-              Ainda Quero Entrar
+              Solicitar Acesso à MAI
             </Button>
           </a>
         </div>

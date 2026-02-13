@@ -1,29 +1,32 @@
-import { AlertTriangle, Layers, Clock, TrendingDown, Users } from "lucide-react";
+import { AlertTriangle, Layers, Clock, TrendingDown, Eye, Unplug } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const problems = [
   {
     icon: Layers,
-    text: "Muitas ferramentas, pouco controle",
+    text: "Dados de mídia, vendas e analytics em ferramentas separadas",
+  },
+  {
+    icon: Unplug,
+    text: "Nenhuma conexão entre investimento e receita real",
+  },
+  {
+    icon: Eye,
+    text: "Visão fragmentada: você vê cliques, mas não vê o ROI ponta a ponta",
   },
   {
     icon: TrendingDown,
-    text: "Dados espalhados, decisões lentas",
+    text: "Decisões baseadas em achismo, não em inteligência cruzada",
   },
   {
-    icon: AlertTriangle,
-    text: "Conteúdo genérico, baixo ROI",
-  },
-  {
-    icon: Users,
-    text: "Equipes sobrecarregadas",
+    icon: Clock,
+    text: "Horas perdidas montando relatórios manuais que já nascem desatualizados",
   },
 ];
 
 const ProblemSection = () => {
   return (
     <section className="relative py-24 px-4 overflow-hidden">
-      {/* Background accent */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       
       <div className="container max-w-6xl mx-auto">
@@ -31,14 +34,14 @@ const ProblemSection = () => {
           {/* Left content */}
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-8">
-              O Marketing Está
+              Seu Marketing Está
               <br />
-              <span className="text-destructive">Fragmentado.</span>
+              <span className="text-destructive">Desconectado.</span>
               <br />
-              O Resultado Também.
+              Seu ROI Também.
             </h2>
 
-            <div className="space-y-6 mb-10">
+            <div className="space-y-5 mb-10">
               {problems.map((problem, index) => (
                 <div
                   key={index}
@@ -60,31 +63,31 @@ const ProblemSection = () => {
                 "O problema não é falta de ferramentas.
                 <br />
                 <span className="text-foreground font-semibold">
-                  É excesso sem inteligência central."
+                  É falta de um cérebro que conecte tudo.
                 </span>
               </p>
             </div>
           </div>
 
-          {/* Right visual */}
+          {/* Right visual - Disconnected ecosystem */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-radial from-destructive/10 via-transparent to-transparent" />
             
-            {/* Fragmented tools illustration */}
             <div className="relative grid grid-cols-3 gap-4">
-              {[...Array(9)].map((_, i) => (
+              {["Google Ads", "Meta Ads", "Shopify", "GA4", "WhatsApp", "LinkedIn", "TikTok", "CRM", "Excel"].map((tool, i) => (
                 <div
                   key={i}
-                  className="aspect-square glass-card flex items-center justify-center group hover:border-destructive/50 transition-all duration-300"
+                  className="aspect-square glass-card flex items-center justify-center group hover:border-destructive/50 transition-all duration-300 p-2"
                   style={{
-                    transform: `rotate(${(i - 4) * 2}deg) translate(${(i % 3 - 1) * 5}px, ${Math.floor(i / 3 - 1) * 5}px)`,
+                    transform: `rotate(${(i - 4) * 3}deg) translate(${(i % 3 - 1) * 5}px, ${Math.floor(i / 3 - 1) * 5}px)`,
                   }}
                 >
-                  <div className="w-8 h-8 rounded-lg bg-muted/50 group-hover:bg-destructive/20 transition-colors" />
+                  <span className="text-[10px] text-muted-foreground group-hover:text-destructive text-center font-medium transition-colors">
+                    {tool}
+                  </span>
                 </div>
               ))}
               
-              {/* Chaos lines */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30">
                 <line x1="20%" y1="20%" x2="80%" y2="80%" stroke="hsl(0 84% 60%)" strokeWidth="1" strokeDasharray="4 4" />
                 <line x1="80%" y1="20%" x2="20%" y2="80%" stroke="hsl(0 84% 60%)" strokeWidth="1" strokeDasharray="4 4" />
@@ -94,11 +97,10 @@ const ProblemSection = () => {
           </div>
         </div>
 
-        {/* Floating CTA */}
         <div className="mt-16 text-center">
           <a href="mailto:maiplataforma@gmail.com">
             <Button variant="neon" size="lg">
-              Quero Simplificar Meu Marketing
+              Quero Conectar Meu Ecossistema
             </Button>
           </a>
         </div>

@@ -6,14 +6,15 @@ const plans = [
     name: "Starter",
     price: "$99",
     period: "/mês",
-    description: "Ideal para pequenos times e freelancers",
+    description: "Ideal para PMEs e times enxutos",
     icon: Rocket,
     color: "primary",
     features: [
-      "Ferramentas de Redação com IA",
-      "Criação Audiovisual automatizada",
-      "Gerenciamento de campanhas centralizadas",
-      "Suporte por email",
+      "Dashboard 360º básico",
+      "Integração com até 3 canais de mídia",
+      "1 canal de venda conectado",
+      "Google Analytics 4 integrado",
+      "Relatórios automatizados",
       "5 usuários inclusos",
     ],
     cta: "Começar Agora",
@@ -23,16 +24,17 @@ const plans = [
     name: "Business",
     price: "$999",
     period: "/mês",
-    description: "Para empresas em crescimento acelerado",
+    description: "Para empresas que buscam visão 360º completa",
     icon: Building2,
     color: "accent",
     features: [
       "Tudo do plano Starter",
-      "CRM completo integrado",
-      "Inbound Marketing automatizado",
-      "Análises avançadas e relatórios",
+      "Todos os canais de mídia",
+      "Múltiplos canais de venda",
+      "Insights e alertas automáticos",
+      "Projeções de crescimento",
+      "Diagnóstico de gargalos",
       "Usuários ilimitados",
-      "Suporte prioritário",
     ],
     cta: "Escolher Business",
     popular: true,
@@ -41,16 +43,16 @@ const plans = [
     name: "Corporate",
     price: "Sob Consulta",
     period: "",
-    description: "Soluções enterprise personalizadas",
+    description: "Ecossistema 360º enterprise",
     icon: Crown,
     color: "secondary",
     features: [
       "Tudo dos planos anteriores",
-      "Enriquecimento de conteúdos de produtos",
-      "Integrações customizadas",
+      "APIs proprietárias integradas",
+      "Modelos preditivos customizados",
+      "Integrações sob medida",
       "SLA garantido",
       "Gerente de conta dedicado",
-      "Treinamento personalizado",
     ],
     cta: "Falar com Especialista",
     popular: false,
@@ -60,13 +62,13 @@ const plans = [
 const benefits = [
   {
     icon: Zap,
-    title: "Tudo em um só lugar",
-    description: "Otimização do gerenciamento de ferramentas de IA centralizadas",
+    title: "Ecossistema 360º",
+    description: "Mídia + Vendas + Analytics em um único painel inteligente",
   },
   {
     icon: TrendingUp,
-    title: "ROI Comprovado",
-    description: "Redução de custos e ganhos operacionais mensuráveis",
+    title: "ROI Real",
+    description: "De investimento a receita — sem achismos, sem planilhas",
   },
 ];
 
@@ -84,7 +86,7 @@ const PricingSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
             <TrendingUp className="w-4 h-4 text-accent" />
             <span className="text-sm text-muted-foreground">
-              Planos flexíveis para cada necessidade
+              Planos para cada tamanho de ecossistema
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4">
@@ -93,7 +95,7 @@ const PricingSection = () => {
             <span className="gradient-text">Ideal Para Você</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Invista no crescimento do seu negócio com as melhores ferramentas de IA do mercado
+            Conecte seu ecossistema completo e veja o ROI real do seu marketing
           </p>
         </div>
 

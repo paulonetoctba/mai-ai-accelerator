@@ -24,12 +24,10 @@ const FinalCTASection = () => {
 
     setIsSubmitting(true);
     
-    // Open mailto with the email
-    const subject = encodeURIComponent("Quero entrar na Lista VIP do MAI");
-    const body = encodeURIComponent(`Olá! Meu email é: ${email}\n\nQuero entrar na lista VIP do MAI.`);
+    const subject = encodeURIComponent("Solicitar Acesso à MAI 360º");
+    const body = encodeURIComponent(`Olá! Meu email é: ${email}\n\nQuero solicitar acesso à MAI — Marketing Intelligence 360º.`);
     window.location.href = `mailto:maiplataforma@gmail.com?subject=${subject}&body=${body}`;
     
-    // Redirect to thank you page after a short delay
     setTimeout(() => {
       setIsSubmitting(false);
       navigate("/obrigado");
@@ -38,25 +36,22 @@ const FinalCTASection = () => {
 
   return (
     <section className="relative py-24 px-4 overflow-hidden">
-      {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
       
       <div className="container max-w-4xl mx-auto relative z-10 text-center">
-        {/* Main headline */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-heading mb-6">
-          O Marketing do Futuro
+          Pare de Analisar Canais Isolados.
           <br />
-          <span className="gradient-text">Começa com Uma Decisão Hoje.</span>
+          <span className="gradient-text">Conecte Seu Ecossistema Completo.</span>
         </h2>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-          Garanta seu acesso antecipado ao <span className="text-primary font-semibold">MAI – Marketing Artificial Intelligence</span> e 
-          lidere o mercado antes da concorrência.
+          Solicite acesso à <span className="text-primary font-semibold">MAI — Marketing Intelligence 360º</span> e 
+          veja como investimento vira receita com inteligência real.
         </p>
 
-        {/* Email capture */}
         <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8">
           <div className="flex flex-col sm:flex-row gap-3">
             <Input
@@ -75,17 +70,16 @@ const FinalCTASection = () => {
               disabled={isSubmitting}
             >
               <Rocket className="w-5 h-5" />
-              {isSubmitting ? "Enviando..." : "Entrar na Lista VIP"}
+              {isSubmitting ? "Enviando..." : "Solicitar Acesso"}
             </Button>
           </div>
         </form>
 
-        {/* Secondary CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="mailto:maiplataforma@gmail.com?subject=Solicitar%20Acesso%20Antecipado">
+          <a href="mailto:maiplataforma@gmail.com?subject=Agendar%20Demo%20MAI%20360">
             <Button variant="neon-outline" size="lg">
               <Calendar className="w-5 h-5" />
-              Solicitar Acesso Antecipado
+              Agendar Demo
             </Button>
           </a>
           <a href="mailto:maiplataforma@gmail.com?subject=Falar%20com%20Especialista">
