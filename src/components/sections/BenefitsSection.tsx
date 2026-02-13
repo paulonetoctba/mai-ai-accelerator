@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const benefits = [
-  "Mais conversão",
-  "Menos custo",
-  "Decisões baseadas em dados",
-  "Velocidade absurda",
-  "Escala previsível",
+  "Visão 360º de Investimento até Receita",
+  "ROI ponta a ponta, não métricas de vaidade",
+  "Diagnóstico automático de gargalos",
+  "Otimizações com impacto financeiro real",
+  "Projeções de crescimento inteligentes",
 ];
 
 const metrics = [
-  { label: "ROI", value: 247, suffix: "%", prefix: "+" },
-  { label: "CAC", value: 38, suffix: "%", prefix: "-" },
-  { label: "Produtividade", value: 89, suffix: "%", prefix: "+" },
+  { label: "ROI Acumulado", value: 247, suffix: "%", prefix: "+" },
+  { label: "Redução do CAC", value: 38, suffix: "%", prefix: "-" },
+  { label: "Receita Incremental", value: 89, suffix: "%", prefix: "+" },
 ];
 
 const AnimatedCounter = ({ value, prefix, suffix }: { value: number; prefix: string; suffix: string }) => {
@@ -48,21 +48,18 @@ const AnimatedCounter = ({ value, prefix, suffix }: { value: number; prefix: str
 const BenefitsSection = () => {
   return (
     <section className="relative py-24 px-4 overflow-hidden">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
       <div className="container max-w-6xl mx-auto relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-4">
             O Que Você Ganha
             <br />
-            <span className="gradient-text">com o MAI</span>
+            <span className="gradient-text">com a MAI 360º</span>
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Benefits list */}
           <div className="space-y-4">
             {benefits.map((benefit, index) => (
               <div
@@ -78,7 +75,6 @@ const BenefitsSection = () => {
             ))}
           </div>
 
-          {/* Metrics */}
           <div className="grid grid-cols-1 gap-6">
             {metrics.map((metric, index) => (
               <div
@@ -93,7 +89,6 @@ const BenefitsSection = () => {
           </div>
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-16">
           <a href="mailto:maiplataforma@gmail.com">
             <Button variant="neon" size="xl">

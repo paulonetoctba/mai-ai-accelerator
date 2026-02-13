@@ -11,7 +11,7 @@ const FloatingCTA = () => {
           className="rounded-full shadow-[0_0_30px_hsl(180_100%_50%/0.4)] hover:shadow-[0_0_50px_hsl(180_100%_50%/0.6)]"
         >
           <Rocket className="w-5 h-5" />
-          <span className="hidden sm:inline">Quero Entrar</span>
+          <span className="hidden sm:inline">Solicitar Acesso</span>
         </Button>
       </a>
     </div>
